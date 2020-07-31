@@ -9,3 +9,7 @@ pip2 install boto (install boto package).
 run ec2.py file get error ('Check your credentials' % (len(names), str(names)))), then add IAM role to ec2 instance (ansible run on that ec2 instance).
 run ec2.py get error (ERROR: "Forbidden", while: getting ElastiCache clusters[root@ip-172-31-47-42 ansible]#), then open ec2.ini and uncommant elasticache.
 eun ec2.py get all running ec2 instances in aws accoubt. 
+generate ssh connetion between server.
+ansible -i ec2.py ec2 -m ping (here ec2 is servers group).
+ansible -i ec2.py ec2 -m command -a "cat /etc/passwd" .
+ansible -i ec2.py ec2 -m file -a "path=/opt/file1 state=touch" .
