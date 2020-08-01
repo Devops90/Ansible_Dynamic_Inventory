@@ -13,3 +13,4 @@ generate ssh connetion between server.
 ansible -i ec2.py ec2 -m ping (here ec2 is servers group).
 ansible -i ec2.py ec2 -m command -a "cat /etc/passwd" .
 ansible -i ec2.py ec2 -m file -a "path=/opt/file1 state=touch" .
+ansible-playbook sample.yml -i ec2.py (run ansible playbook on dainamic inventory).
